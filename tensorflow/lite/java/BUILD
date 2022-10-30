@@ -909,6 +909,8 @@ jni_binary_with_tflite(
     linkscript = ":tflite_version_script.lds",
     tflite_deps = [
         "//tensorflow/lite/delegates/nnapi/java/src/main/native",
+        "//tensorflow/lite/delegates/xnnpack:xnnpack_delegate",
+        "//tensorflow/lite/delegates/gpu/java/src/main/native",
         "//tensorflow/lite/java/src/main/native",
     ],
     deps = [
